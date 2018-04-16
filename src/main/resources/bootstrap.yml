@@ -1,6 +1,12 @@
 spring:
+  application:
+    name: service-config
+  profiles: dev,default
   cloud:
     config:
       server:
         git:
-          uri: file://${user.home}/config-repo
+          uri: https://github.com/lizhongxiang12138/service-config.git
+          search-paths: config-repo
+          username: 953934680@qq.com
+          password: aLZX12138
