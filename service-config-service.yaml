@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: service-config
+  name: service-config
+  namespace: default
+spec:
+  type: NodePort
+  ports:
+    - name: service-config
+      port: 30005
+      targetPort: 30005
+      nodePort: 30005
+  selector:
+    k8s-app: service-config
