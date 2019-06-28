@@ -1,7 +1,7 @@
 spring:
   application:
     name: service-config
-  profiles: dev,default
+  profiles: dev,default,local
   cloud:
     config:
       server:
