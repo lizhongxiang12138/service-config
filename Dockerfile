@@ -1,5 +1,7 @@
 FROM java
-VOLUME /tmp
+MAINTAINER lzx <953934680@qq.com>
+
+ENTRYPOINT ["/usr/bin/java", "-jar", "/usr/share/serviceConfig/service-config.jar"]
+
 ARG JAR_FILE
-ADD ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+ADD target/service-config-0.0.1-SNAPSHOT.jar /usr/share/serviceConfig/service-config.jar
